@@ -1,0 +1,8 @@
+---
+- name: Install and configure Quagga
+  hosts: node1
+  become: true
+  become_user: root
+  gather_facts: yes
+  roles:
+    - quagga

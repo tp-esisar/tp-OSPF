@@ -1,0 +1,33 @@
+hostname {{ ospfd_conf.hostname }}
+
+log file {{ ospfd_conf.logfile }}
+log monitor
+log stdout
+log syslog
+
+password {{ password }}
+enable password {{ password }}
+
+router ospf
+# area 1 shortcut
+#       area -ge 1
+#       This is essential if you want the Level 2 routing domain to be akin to that of Intermediate System-Intermediate System
+capability opaque
+mpls-te on
+network 0.0.0.0/0 area 0
+#       Interfaces with addresses matching this prefix will belong to the area specified
+# ospf abr-type shortcut
+# ospf opaque-lsa
+
+{% for item in ospfd_conf.redistribute -%}
+redistribute {{ item }} {{ '\n' }}
+{%- endfor %}
+
+{% for item in ospfd_conf.interfaces -%}
+!2
+interface {{ item }} {{ '\n' }}
+{%- endfor %}
+
+{% for item in ospfd_conf.other -%}
+{{ item }} {{ '\n' }}
+{%- endfor %}

@@ -1,0 +1,3 @@
+conffiles:
+    - ospfd.conf
+    - zebra.conf

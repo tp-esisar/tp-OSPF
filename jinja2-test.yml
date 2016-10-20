@@ -1,0 +1,6 @@
+---
+- hosts: 127.0.0.1
+  tasks:
+  - include_vars: roles/quagga/defaults/main.yml
+  - name: Test jinja2template
+    template: src=roles/quagga/templates/ospfd.conf.j2 dest=test.conf

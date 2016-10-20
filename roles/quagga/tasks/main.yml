@@ -1,0 +1,16 @@
+---
+  - include_vars: quaggavars.yml
+
+  - name: Deploy Quagga for Debian Systems
+    apt: pkg=quagga state=latest
+    when: ansible_os_family == 'Debian'
+
+  - name: Create config files
+    template: src={{ item }}.j2 dest=/etc/quagga/{{ item }}
+    with_items: '{{conffiles}}'
+
+  - name: Enable desired routing protocols
+    template: src=daemons.j2 dest=/etc/quagga/daemons
+
+    notify:
+    - Restart Quagga
