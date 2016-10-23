@@ -1,3 +1,4 @@
 ansible_connection: ssh
 ansible_ssh_user: root
 ansible_ssh_pass: root
+#host_key_checking: False
