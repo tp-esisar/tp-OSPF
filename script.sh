@@ -18,11 +18,6 @@ echo "
 10.224.33.253 pop4bk2
 " >> /etc/hosts
 
-echo "deb http://httpredir.debian.org/debian wheezy-backports main contrib non-free" >> /etc/apt/sources.list
-echo "deb-src http://httpredir.debian.org/debian wheezy-backports main contrib non-free" >> /etc/apt/sources.list
-
-apt-get update && apt-get -t wheezy-backports install -y ansible
-
 brctl addbr br0
 read -p "Lancer tous les périphériques de Marionnet et appuyer sur entrer" pause
 
