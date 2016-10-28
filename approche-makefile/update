@@ -19,31 +19,31 @@ case $1 in
 	"pop1")
 	for elem in $pop1 
 	do
-		update_router $elem
+		update_router $elem &
 	done
     ;;
     "pop2")
 	for elem in $pop2 
 	do
-		update_router $elem
+		update_router $elem &
 	done
     ;;
     "pop3")
 	for elem in $pop3
 	do
-		update_router $elem
+		update_router $elem &
 	done
     ;;
     "pop4")
 	for elem in $pop4
 	do
-		update_router $elem
+		update_router $elem &
 	done
     ;;
     "all")
 	for elem in $all 
 	do
-		update_router $elem
+		update_router $elem &
 	done
     ;;
   	*)
