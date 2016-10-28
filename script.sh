@@ -18,6 +18,8 @@ echo "
 10.224.33.253 pop4bk2
 " >> /etc/hosts
 
+apt-get update && apt-get install sshpass
+
 brctl addbr br0
 read -p "Lancer tous les périphériques de Marionnet et appuyer sur entrer" pause
 
