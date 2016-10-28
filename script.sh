@@ -1,5 +1,23 @@
 #!/bin/bash
 
+echo "
+10.224.32.1 pop1r1
+10.224.32.2 pop1r2
+10.224.32.254 pop1bk1
+10.224.32.253 pop1bk2
+10.224.64.1 pop2r1
+10.224.64.2 pop2hq
+10.224.64.254 pop2bk1
+10.224.64.253 pop2bk2
+10.224.96.1 pop3r1
+10.224.96.2 pop3hq
+10.224.96.254 pop3bk1
+10.224.96.253 pop3bk2
+10.224.33.1 pop4r1
+10.224.33.254 pop4bk1
+10.224.33.253 pop4bk2
+" >> /etc/hosts
+
 echo "deb http://httpredir.debian.org/debian wheezy-backports main contrib non-free" >> /etc/apt/sources.list
 echo "deb-src http://httpredir.debian.org/debian wheezy-backports main contrib non-free" >> /etc/apt/sources.list
 
