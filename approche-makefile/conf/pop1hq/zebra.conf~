@@ -1,0 +1,12 @@
+!
+! Zebra configuration file
+!
+hostname Router
+password zebra
+enable password zebra
+!
+log stdout
+!
+ip route 193.4.2.0/24 Null
+!
+

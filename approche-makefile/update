@@ -1,7 +1,7 @@
 #!/bin/sh
 pop1r="pop1r1 pop1r2"
 pop1bk="pop1bk1 pop1bk2"
-pop1="$pop1r $pop1bk"
+pop1="$pop1r $pop1bk pop1hq"
 pop2="pop2r1 pop2hq pop2bk1 pop2bk2"
 pop3="pop3r1 pop3hq pop3bk1 pop3bk2"
 pop4="pop4r1 pop4bk1 pop4bk2"
